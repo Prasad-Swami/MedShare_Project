@@ -1,0 +1,162 @@
+ Medicine Donation Management System
+reduce the wastage of unused medicines by connecting medicine donors, such as pharmacies, with verified NGOs and healthcare organizations that need them.
+
+
+
+Recipient workflow
+Recipient is the person who wants to request an available medicine.
+1. Recipient opens the website.
+2. Registers as a Recipient.
+3. Logs in.
+4. Gets redirected to the Recipient Dashboard.
+5. Opens Browse Medicines.
+6. Views approved medicine listings.
+7. Searches for a particular medicine or filters by category.
+8. Opens medicine details.
+9. Submits a request with the required quantity.
+10. The request receives Pending status.
+11. Admin reviews the request.
+12. Recipient can track whether the request is approved, rejected or fulfilled
+
+
+3 Modules
+1. Admin
+2. user
+3. Donor
+
+collection
+users - ID, name, email, pwd, phone, account created(date)
+
+
+
+MedShare/
+│
+├── public/
+│   ├── images/
+│   │   ├── medshare-logo.png
+│   │   ├── hero-medicine.png
+│   │   └── medicine-placeholder.png
+│   └── favicon.ico
+│
+├── src/
+│   │
+│   ├── assets/
+│   │   ├── images/
+│   │   └── icons/
+│   │
+│   ├── components/
+│   │   ├── common/
+│   │   │   ├── Navbar.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   ├── Loader.tsx
+│   │   │   ├── ErrorMessage.tsx
+│   │   │   └── ProtectedRoute.tsx
+│   │   │
+│   │   ├── cards/
+│   │   │   ├── MedicineCard.tsx
+│   │   │   ├── DonationCard.tsx
+│   │   │   └── NGOCard.tsx
+│   │   │
+│   │   └── forms/
+│   │       ├── LoginForm.tsx
+│   │       ├── RegisterForm.tsx
+│   │       ├── MedicineForm.tsx
+│   │       └── DonationForm.tsx
+│   │
+│   ├── layouts/
+│   │   ├── MainLayout.tsx
+│   │   ├── UserLayout.tsx
+│   │   └── AdminLayout.tsx
+│   │
+│   ├── pages/
+│   │   │
+│   │   ├── HomePage.tsx
+│   │   │
+│   │   ├── auth/
+│   │   │   ├── LoginPage.tsx
+│   │   │   ├── RegisterPage.tsx
+│   │   │   └── ForgotPasswordPage.tsx
+│   │   │
+│   │   ├── medicines/
+│   │   │   ├── MedicinesPage.tsx
+│   │   │   ├── MedicineDetailsPage.tsx
+│   │   │   ├── DonateMedicinePage.tsx
+│   │   │   └── RequestMedicinePage.tsx
+│   │   │
+│   │   ├── user/
+│   │   │   ├── UserDashboardPage.tsx
+│   │   │   ├── MyDonationsPage.tsx
+│   │   │   ├── MyRequestsPage.tsx
+│   │   │   └── ProfilePage.tsx
+│   │   │
+│   │   ├── ngo/
+│   │   │   ├── NGORegistrationPage.tsx
+│   │   │   ├── NGODashboardPage.tsx
+│   │   │   ├── MembershipPage.tsx
+│   │   │   └── NGODonationRequestsPage.tsx
+│   │   │
+│   │   ├── donations/
+│   │   │   ├── DonateMoneyPage.tsx
+│   │   │   ├── GeneralFundPage.tsx
+│   │   │   └── MedicineAssistanceFundPage.tsx
+│   │   │
+│   │   ├── admin/
+│   │   │   ├── AdminDashboardPage.tsx
+│   │   │   ├── ManageUsersPage.tsx
+│   │   │   ├── ManageNGOsPage.tsx
+│   │   │   ├── ManageMedicinesPage.tsx
+│   │   │   ├── ManageMembershipPage.tsx
+│   │   │   ├── ManageRequestsPage.tsx
+│   │   │   └── DonationReportsPage.tsx
+│   │   │
+│   │   └── errors/
+│   │       ├── NotFoundPage.tsx
+│   │       └── UnauthorizedPage.tsx
+│   │
+│   ├── routes/
+│   │   └── AppRoutes.tsx
+│   │
+│   ├── services/
+│   │   ├── api.ts
+│   │   ├── authService.ts
+│   │   ├── userService.ts
+│   │   ├── medicineService.ts
+│   │   ├── requestService.ts
+│   │   ├── donationService.ts
+│   │   └── ngoService.ts
+│   │
+│   ├── context/
+│   │   └── AuthContext.tsx
+│   │
+│   ├── types/
+│   │   ├── User.ts
+│   │   ├── Medicine.ts
+│   │   ├── NGO.ts
+│   │   ├── Donation.ts
+│   │   └── Request.ts
+│   │
+│   ├── utils/
+│   │   ├── validation.ts
+│   │   ├── constants.ts
+│   │   └── dateUtils.ts
+│   │
+│   ├── theme/
+│   │   └── theme.ts
+│   │
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+│
+├── .env
+├── .gitignore
+├── index.html
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
+
+
+
+
+
+

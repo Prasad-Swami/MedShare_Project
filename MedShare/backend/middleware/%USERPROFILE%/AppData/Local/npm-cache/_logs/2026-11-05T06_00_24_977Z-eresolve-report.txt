@@ -1,0 +1,16 @@
+'Log files:
+D:\CDAC\WPT\Mini-Project\%USERPROFILE%\AppData\Local\npm-cache\_logs\2026-11-05T06_00_24_977Z-debug-0.log
+
+# npm resolution error report
+
+While resolving: medshare@0.0.0
+Found: typescript@7.0.2
+node_modules/typescript
+  dev typescript@"~7.0.2" from the root project
+
+Could not resolve dependency:
+peer typescript@">=4.8.4 <6.1.0" from typescript-eslint@8.72.1
+node_modules/typescript-eslint
+  dev typescript-eslint@"^8.72.0" from the root project
+
+Fix the upstream dependency conflict, or retry this command with --force or --legacy-peer-deps to accept an incorrect (and potentially broken) dependency resolution.

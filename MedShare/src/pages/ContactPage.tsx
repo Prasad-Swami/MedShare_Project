@@ -1,4 +1,7 @@
+```tsx
 import { useState } from "react";
+import type { ChangeEvent, FormEvent } from "react";
+
 import {
   Box,
   Container,
@@ -28,7 +31,7 @@ function ContactPage() {
   const [success, setSuccess] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData({
       ...formData,
@@ -36,7 +39,7 @@ function ContactPage() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     console.log("Contact Form Data:", formData);
@@ -53,6 +56,7 @@ function ContactPage() {
 
   return (
     <Box sx={{ backgroundColor: "#f5fafa", minHeight: "100vh" }}>
+      {/* Header Section */}
       <Box
         sx={{
           background: "linear-gradient(135deg, #005b70, #008f95)",
@@ -82,8 +86,11 @@ function ContactPage() {
           </Typography>
         </Container>
       </Box>
+
+      {/* Main Content */}
       <Container maxWidth="lg" sx={{ py: { xs: 5, md: 8 } }}>
         <Grid container spacing={4}>
+          {/* Left Section */}
           <Grid size={{ xs: 12, md: 5 }}>
             <Box sx={{ mb: 4 }}>
               <Typography
@@ -102,6 +109,7 @@ function ContactPage() {
             </Box>
 
             <Stack spacing={3}>
+              {/* Email */}
               <Paper
                 elevation={0}
                 sx={{
@@ -132,6 +140,7 @@ function ContactPage() {
                 </Box>
               </Paper>
 
+              {/* Phone */}
               <Paper
                 elevation={0}
                 sx={{
@@ -162,6 +171,7 @@ function ContactPage() {
                 </Box>
               </Paper>
 
+              {/* Location */}
               <Paper
                 elevation={0}
                 sx={{
@@ -183,6 +193,7 @@ function ContactPage() {
                 >
                   <LocationOnOutlinedIcon />
                 </Box>
+
                 <Box>
                   <Typography fontWeight={700}>Our Location</Typography>
                   <Typography color="text.secondary">
@@ -191,6 +202,8 @@ function ContactPage() {
                 </Box>
               </Paper>
             </Stack>
+
+            {/* Mission */}
             <Box
               sx={{
                 mt: 4,
@@ -208,7 +221,9 @@ function ContactPage() {
                 people in need.
               </Typography>
             </Box>
-          </Grid>}
+          </Grid>
+
+          {/* Right Section */}
           <Grid size={{ xs: 12, md: 7 }}>
             <Paper
               elevation={0}
@@ -294,9 +309,11 @@ function ContactPage() {
                       fontWeight: 700,
                       textTransform: "none",
                       fontSize: "16px",
-                      background: "linear-gradient(135deg, #008f95, #005b70)",
+                      background:
+                        "linear-gradient(135deg, #008f95, #005b70)",
                       "&:hover": {
-                        background: "linear-gradient(135deg, #00777c, #004554)",
+                        background:
+                          "linear-gradient(135deg, #00777c, #004554)",
                       },
                     }}
                   >
@@ -313,3 +330,4 @@ function ContactPage() {
 }
 
 export default ContactPage;
+```

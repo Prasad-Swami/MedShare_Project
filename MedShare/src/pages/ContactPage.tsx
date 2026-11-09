@@ -1,4 +1,3 @@
-```tsx
 import { useState } from "react";
 import type { ChangeEvent, FormEvent } from "react";
 
@@ -330,4 +329,3 @@ function ContactPage() {
 }
 
 export default ContactPage;
-```
